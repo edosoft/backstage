@@ -29,6 +29,7 @@ import { entityPage } from './components/catalog/EntityPage';
 import { searchPage } from './components/search/SearchPage';
 import { Root } from './components/Root';
 
+import { googleAuthApiRef } from '@backstage/core-plugin-api';
 import {
   AlertDisplay,
   OAuthRequestDialog,
@@ -60,7 +61,12 @@ const app = createApp({
     });
   },
   components: {
-    SignInPage: props => <SignInPage {...props} auto providers={['guest']} />,
+    SignInPage: props => <SignInPage {...props} auto providers={['guest', {
+          id: 'google-auth-provider',
+          title: 'Google',
+          message: 'Sign in using Google',
+          apiRef: googleAuthApiRef,
+        }} />,
   },
 });
 
