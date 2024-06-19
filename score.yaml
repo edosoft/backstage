@@ -41,6 +41,8 @@ containers:
       POSTGRES_PORT: ${resources.db.port}
       POSTGRES_USER: ${resources.db.username}
       CLOUD_PROVIDER: ${resources.env.CLOUD_PROVIDER}
+      AUTH_GOOGLE_CLIENT_ID: ${resources.env.AUTH_GOOGLE_CLIENT_ID}
+      AUTH_GOOGLE_CLIENT_SECRET: ${resources.env.AUTH_GOOGLE_CLIENT_SECRET}
 
     files:
       - target: /app/credentials/github-app-backstage-humanitec-credentials.yaml
