@@ -66,7 +66,7 @@ const app = createApp({
           title: 'Google',
           message: 'Sign in using Google',
           apiRef: googleAuthApiRef,
-        }} />,
+        }]} />,
   },
 });
 
